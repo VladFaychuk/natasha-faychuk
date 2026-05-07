@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Наташа Файчук — Руководитель проектов</title>
+<meta name="description" content="Наташа Файчук — руководитель проектов. 17+ лет в организации городских культурно-массовых мероприятий и фестивалей в Москве." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F5F0E8;
+  --bg-soft: #EFE8DC;
+  --bg-card: #FBFAF7;
+  --ink: #1A2238;
+  --ink-soft: #2D3656;
+  --muted: #6E6760;
+  --line: #D9D0BE;
+  --accent: #B43F2E;
+  --accent-soft: #D5705F;
+  --gold: #A8884B;
+  --serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Manrope', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+  --max: 1280px;
+  --gutter: clamp(20px, 4vw, 64px);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-weight: 400; font-size: 16px; line-height: 1.6;
+  color: var(--ink); background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at top left, rgba(180, 63, 46, 0.04), transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(168, 136, 75, 0.05), transparent 50%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+body::before {
+  content: ''; position: fixed; inset: 0;
+  pointer-events: none; opacity: 0.4; z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.2 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); position: relative; z-index: 2; }
+
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(245, 240, 232, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+.logo { font-family: var(--serif); font-weight: 500; font-size: 22px; letter-spacing: -0.01em; display: flex; align-items: baseline; gap: 10px; }
+.logo-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.nav-links { display: flex; gap: 32px; list-style: none; font-size: 14px; font-weight: 500; }
+.nav-links a { position: relative; padding: 4px 0; transition: color .25s; }
+.nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: var(--accent); transition: width .3s ease; }
+.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover::after { width: 100%; }
+.burger { display: none; background: none; border: none; cursor: pointer; width: 36px; height: 36px; padding: 8px; }
+.burger span { display: block; width: 100%; height: 1.5px; background: var(--ink); margin: 5px 0; transition: transform .3s, opacity .3s; }
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.hero { padding: clamp(60px, 10vw, 120px) 0 clamp(40px, 6vw, 80px); }
+.hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(40px, 6vw, 90px); align-items: center; }
+.hero-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; display: inline-flex; align-items: center; gap: 12px; }
+.hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
+.hero-title { font-family: var(--serif); font-weight: 300; font-size: clamp(52px, 8vw, 108px); line-height: 0.92; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 32px; }
+.hero-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+.hero-tagline { font-family: var(--serif); font-size: clamp(22px, 2.6vw, 32px); line-height: 1.3; font-weight: 300; font-style: italic; color: var(--ink-soft); margin-bottom: 40px; max-width: 580px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 18px 32px; align-items: center; margin-bottom: 40px; font-size: 14px; color: var(--muted); }
+.hero-meta span { display: flex; align-items: center; gap: 8px; }
+.hero-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; font-size: 14px; font-weight: 500; letter-spacing: 0.02em; border: 1px solid var(--ink); cursor: pointer; transition: all .3s ease; background: var(--ink); color: var(--bg); border-radius: 0; }
+.btn:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn .arrow { transition: transform .3s; }
+.btn:hover .arrow { transform: translateX(4px); }
+.hero-portrait { position: relative; align-self: stretch; }
+.hero-portrait-frame { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--ink); }
+.hero-portrait-frame img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.05); }
+.hero-portrait-mark { position: absolute; bottom: -22px; right: -22px; background: var(--accent); color: var(--bg); padding: 18px 22px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; z-index: 2; }
+.hero-portrait-no { position: absolute; top: -16px; left: -16px; font-family: var(--serif); font-style: italic; font-size: 100px; font-weight: 300; color: var(--ink); opacity: 0.08; z-index: -1; line-height: 1; }
+
+.spectrum { padding: clamp(40px, 6vw, 80px) 0 clamp(50px, 7vw, 90px); }
+.spectrum-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; display: flex; align-items: center; gap: 14px; }
+.spectrum-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
+.spectrum-intro { font-family: var(--serif); font-weight: 300; font-size: clamp(24px, 3vw, 36px); line-height: 1.25; max-width: 760px; margin-bottom: 50px; color: var(--ink-soft); }
+.spectrum-intro em { color: var(--accent); font-style: italic; }
+.spectrum-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.5vw, 32px); }
+.spectrum-card { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--ink); }
+.spectrum-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.spectrum-card:hover img { transform: scale(1.06); }
+.spectrum-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,34,56,0.82) 0%, rgba(26,34,56,0.15) 50%, transparent 75%); pointer-events: none; }
+.spectrum-card-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; color: var(--bg); z-index: 2; }
+.spectrum-tag { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 12px; }
+.spectrum-title { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.15; margin-bottom: 6px; }
+.spectrum-subtitle { font-size: 13px; color: rgba(245, 240, 232, 0.7); }
+
+.stats { background: var(--ink); color: var(--bg); padding: clamp(50px, 7vw, 90px) 0; position: relative; overflow: hidden; }
+.stats::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 20%, rgba(180, 63, 46, 0.18), transparent 50%), radial-gradient(circle at 80% 80%, rgba(168, 136, 75, 0.15), transparent 50%); pointer-events: none; }
+.stats-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 14px; }
+.stats-title { font-family: var(--serif); font-weight: 300; font-size: clamp(32px, 4.5vw, 56px); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 60px; max-width: 720px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.stat { padding: 28px 28px; border-left: 1px solid rgba(245, 240, 232, 0.18); }
+.stat:first-child { border-left: none; padding-left: 0; }
+.stat-num { font-family: var(--serif); font-weight: 300; font-size: clamp(48px, 6vw, 84px); line-height: 1; letter-spacing: -0.03em; color: var(--bg); margin-bottom: 14px; display: flex; align-items: baseline; gap: 6px; }
+.stat-num small { font-family: var(--sans); font-size: 18px; font-weight: 500; color: var(--accent-soft); letter-spacing: 0; }
+.stat-label { font-size: 13px; font-weight: 500; color: rgba(245, 240, 232, 0.65); line-height: 1.5; }
+
+.section-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; display: flex; align-items: center; gap: 14px; }
+.section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
+.section-title { font-family: var(--serif); font-weight: 300; font-size: clamp(36px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 60px; }
+.section-title em { font-style: italic; color: var(--accent); }
+
+.about { padding: clamp(80px, 10vw, 140px) 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(40px, 6vw, 100px); align-items: start; }
+.about-text p { font-size: 17px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 1.4em; }
+.about-text p:last-child { margin-bottom: 0; }
+.about-text strong { color: var(--ink); font-weight: 600; }
+.about-aside { position: sticky; top: 100px; }
+.principles { background: var(--bg-card); padding: 36px; border-left: 3px solid var(--accent); }
+.principles-title { font-family: var(--serif); font-style: italic; font-size: 22px; font-weight: 400; margin-bottom: 24px; color: var(--ink); }
+.principles ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.principles li { font-size: 14.5px; line-height: 1.55; padding-left: 24px; position: relative; color: var(--ink-soft); }
+.principles li::before { content: ''; position: absolute; left: 0; top: 10px; width: 12px; height: 1px; background: var(--accent); }
+
+.cases { padding: clamp(60px, 9vw, 130px) 0; background: var(--bg-soft); }
+.cases-head { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 24px; margin-bottom: 60px; }
+.cases-count { font-family: var(--mono); font-size: 13px; color: var(--muted); letter-spacing: 0.15em; }
+
+.case-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--bg-card); margin-bottom: 16px; overflow: hidden; }
+.case-hero-image { position: relative; min-height: 480px; overflow: hidden; cursor: pointer; }
+.case-hero-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.case-hero:hover .case-hero-image img { transform: scale(1.04); }
+.case-hero-overlay { position: absolute; inset: 0; background: rgba(26, 34, 56, 0); display: flex; align-items: center; justify-content: center; color: var(--bg); font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0; transition: all .35s ease; }
+.case-hero-overlay span { border: 1px solid var(--bg); padding: 12px 20px; }
+.case-hero-image:hover .case-hero-overlay { opacity: 1; background: rgba(26, 34, 56, 0.4); }
+.case-hero-content { padding: clamp(32px, 5vw, 60px); display: flex; flex-direction: column; justify-content: center; }
+.case-tag { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; padding: 6px 12px; border: 1px solid var(--accent); align-self: flex-start; }
+.case-title { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.015em; margin-bottom: 14px; color: var(--ink); }
+.case-meta { display: flex; gap: 20px; font-size: 13px; color: var(--muted); margin-bottom: 24px; flex-wrap: wrap; }
+.case-meta span { display: flex; align-items: center; gap: 8px; }
+.case-meta span:not(:last-child)::after { content: ''; width: 3px; height: 3px; border-radius: 50%; background: var(--gold); margin-left: 12px; }
+.case-desc { font-size: 15.5px; line-height: 1.7; color: var(--ink-soft); margin-bottom: 28px; }
+.case-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+.case-stat-num { font-family: var(--serif); font-size: 36px; font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.case-stat-label { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; }
+
+.case-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 80px; }
+.gal-item { position: relative; aspect-ratio: 4 / 3; overflow: hidden; cursor: pointer; background: var(--bg-card); border: none; padding: 0; }
+.gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.gal-item:hover img { transform: scale(1.06); }
+.gal-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 16px; font-size: 12px; line-height: 1.4; color: var(--bg); text-align: left; background: linear-gradient(to top, rgba(26,34,56,0.85), transparent); opacity: 0; transform: translateY(8px); transition: all .3s ease; }
+.gal-item:hover .gal-caption { opacity: 1; transform: translateY(0); }
+
+.cases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(24px, 3vw, 48px); }
+.case-card { background: var(--bg-card); overflow: hidden; display: flex; flex-direction: column; }
+.case-card-image { aspect-ratio: 4 / 3; overflow: hidden; position: relative; cursor: pointer; }
+.case-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.case-card:hover .case-card-image img { transform: scale(1.05); }
+.case-card-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(26, 34, 56, 0.45)); pointer-events: none; }
+.case-card-badge { position: absolute; top: 16px; right: 16px; background: rgba(26, 34, 56, 0.85); color: var(--bg); padding: 6px 12px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; z-index: 2; }
+.case-card-body { padding: 28px 32px 32px; flex: 1; display: flex; flex-direction: column; }
+.case-card-year { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.15em; margin-bottom: 10px; }
+.case-card-title { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.2; margin-bottom: 12px; color: var(--ink); }
+.case-card-meta { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.case-card-desc { font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 20px; }
+.case-card-mini-gal { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: auto; }
+.mini-thumb { aspect-ratio: 1; overflow: hidden; background: var(--bg); border: none; padding: 0; cursor: pointer; transition: opacity .2s; }
+.mini-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.mini-thumb:hover { opacity: 0.75; }
+
+.experience { padding: clamp(80px, 10vw, 140px) 0; }
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+.tl-item { position: relative; padding-bottom: 48px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before { content: ''; position: absolute; left: -36px; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 1.5px solid var(--accent); }
+.tl-item.highlight::before { background: var(--accent); box-shadow: 0 0 0 5px rgba(180, 63, 46, 0.15); }
+.tl-period { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; }
+.tl-role { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.25; margin-bottom: 6px; color: var(--ink); }
+.tl-company { font-size: 14px; color: var(--muted); margin-bottom: 14px; font-weight: 500; }
+.tl-desc { font-size: 14.5px; line-height: 1.7; color: var(--ink-soft); max-width: 720px; }
+
+.skills { padding: clamp(60px, 9vw, 130px) 0; background: var(--bg-soft); }
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 5vw, 80px); }
+.skills-col h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 22px; color: var(--ink); margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.skill-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-list li { padding: 10px 18px; background: var(--bg-card); border: 1px solid var(--line); font-size: 13.5px; color: var(--ink-soft); transition: all .25s; cursor: default; }
+.skill-list li:hover { border-color: var(--accent); color: var(--accent); }
+.tools-list { display: flex; flex-direction: column; gap: 14px; }
+.tool { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.tool:last-child { border-bottom: none; }
+.tool-name { color: var(--ink); font-weight: 500; }
+.tool-level { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.05em; }
+
+.clients { padding: clamp(60px, 8vw, 100px) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.clients-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px 48px; margin-top: 40px; }
+.client { font-family: var(--serif); font-size: 18px; line-height: 1.4; font-weight: 400; color: var(--ink); padding: 20px 0; border-top: 1px solid var(--line); display: flex; align-items: flex-start; gap: 16px; }
+.client-num { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.15em; margin-top: 6px; min-width: 26px; }
+
+.contact { padding: clamp(80px, 11vw, 160px) 0; background: var(--ink); color: var(--bg); position: relative; overflow: hidden; }
+.contact::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 90% 10%, rgba(180, 63, 46, 0.2), transparent 40%), radial-gradient(circle at 10% 90%, rgba(168, 136, 75, 0.12), transparent 50%); }
+.contact-inner { position: relative; z-index: 2; max-width: 900px; }
+.contact .section-eyebrow { color: var(--accent-soft); }
+.contact .section-eyebrow::before { background: var(--accent-soft); }
+.contact-title { font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 7vw, 88px); line-height: 1; letter-spacing: -0.025em; margin-bottom: 40px; }
+.contact-title em { color: var(--accent-soft); font-style: italic; }
+.contact-text { font-size: 19px; line-height: 1.6; margin-bottom: 60px; color: rgba(245, 240, 232, 0.85); max-width: 620px; }
+.contact-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; }
+.contact-item { display: flex; flex-direction: column; gap: 6px; }
+.contact-item-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245, 240, 232, 0.5); }
+.contact-item a, .contact-item span.val { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--bg); position: relative; transition: color .25s; align-self: flex-start; }
+.contact-item a:hover { color: var(--accent-soft); }
+.contact-item a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: var(--accent-soft); transform: scaleX(0); transform-origin: left; transition: transform .35s ease; }
+.contact-item a:hover::after { transform: scaleX(1); }
+
+.footer { padding: 32px 0; background: var(--ink); color: rgba(245, 240, 232, 0.55); font-size: 13px; border-top: 1px solid rgba(245, 240, 232, 0.1); }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+
+.lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(20, 25, 40, 0.96); display: none; align-items: center; justify-content: center; padding: clamp(20px, 5vh, 60px) clamp(20px, 5vw, 80px); }
+.lightbox.open { display: flex; }
+.lb-img-wrap { position: relative; max-width: 100%; max-height: 100%; display: flex; flex-direction: column; align-items: center; }
+.lb-img { max-width: 100%; max-height: calc(100vh - 140px); object-fit: contain; display: block; }
+.lb-caption { margin-top: 20px; font-family: var(--serif); font-style: italic; font-size: 16px; color: rgba(245, 240, 232, 0.8); text-align: center; max-width: 720px; }
+.lb-close { position: absolute; top: 20px; right: 20px; width: 44px; height: 44px; background: transparent; color: var(--bg); border: 1px solid rgba(245,240,232,0.3); cursor: pointer; font-size: 22px; display: flex; align-items: center; justify-content: center; transition: all .25s; }
+.lb-close:hover { background: var(--accent); border-color: var(--accent); }
+.lb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; background: rgba(245,240,232,0.1); color: var(--bg); border: 1px solid rgba(245,240,232,0.25); cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all .25s; }
+.lb-nav:hover { background: var(--accent); border-color: var(--accent); }
+.lb-prev { left: 20px; }
+.lb-next { right: 20px; }
+.lb-counter { position: absolute; top: 28px; left: 24px; font-family: var(--mono); font-size: 12px; color: rgba(245,240,232,0.6); letter-spacing: 0.15em; }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); flex-direction: column; padding: 20px var(--gutter); border-bottom: 1px solid var(--line); gap: 18px; }
+  .nav-links.open { display: flex; }
+  .burger { display: block; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-portrait { order: -1; max-width: 380px; margin: 0 auto; width: 100%; }
+  .spectrum-grid { grid-template-columns: 1fr; }
+  .spectrum-card { aspect-ratio: 16 / 11; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+  .stat { padding: 24px 16px; border-left: 1px solid rgba(245, 240, 232, 0.18); border-bottom: 1px solid rgba(245, 240, 232, 0.18); }
+  .stat:nth-child(2n+1) { border-left: none; padding-left: 0; }
+  .stat:nth-last-child(-n+2) { border-bottom: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-aside { position: static; }
+  .case-hero { grid-template-columns: 1fr; }
+  .case-hero-image { min-height: 300px; }
+  .case-gallery { grid-template-columns: repeat(2, 1fr); }
+  .cases-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .case-stats { grid-template-columns: repeat(2, 1fr); }
+  .lb-nav { width: 40px; height: 40px; }
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
+}
+
+@media (max-width: 480px) {
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .btn { justify-content: center; }
+  .case-stats { grid-template-columns: 1fr; gap: 16px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat { border-left: none !important; padding-left: 0 !important; padding-right: 0; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { animation: fadeUp .9s ease both; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a href="#top" class="logo"><span class="logo-dot"></span>Наташа Файчук</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">О себе</a></li>
+      <li><a href="#cases">Проекты</a></li>
+      <li><a href="#experience">Опыт</a></li>
+      <li><a href="#skills">Навыки</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-eyebrow">Руководитель проектов · Москва</div>
+        <h1 class="hero-title">Наташа<br/>Файчук<em>.</em></h1>
+        <p class="hero-tagline">Превращаю Москву в&nbsp;лучший город на&nbsp;земле.</p>
+        <div class="hero-meta">
+          <span><span class="dot"></span>17+ лет в профессии</span>
+          <span><span class="dot"></span>67 одновременных локаций</span>
+          <span><span class="dot"></span>5+ госзаказчиков</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#cases" class="btn">Посмотреть проекты <span class="arrow">→</span></a>
+          <a href="#contact" class="btn btn-ghost">Связаться</a>
+        </div>
+      </div>
+      <div class="hero-portrait reveal" style="animation-delay:.15s">
+        <span class="hero-portrait-no">№01</span>
+        <div class="hero-portrait-frame"><img src="images/portrait.jpg" alt="Наташа Файчук" /></div>
+        <div class="hero-portrait-mark">Est. 2003</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spectrum">
+  <div class="container">
+    <div class="spectrum-eyebrow">Спектр работы</div>
+    <h2 class="spectrum-intro">Не&nbsp;только декорации и&nbsp;озеленение&nbsp;— <em>живые события</em>, актёры, музыка, праздник для&nbsp;каждого района.</h2>
+    <div class="spectrum-grid">
+      <div class="spectrum-card">
+        <img src="images/case_summer_02.jpg" alt="Городские сады" />
+        <div class="spectrum-card-content">
+          <div class="spectrum-tag">Сады · Озеленение</div>
+          <div class="spectrum-title">Городские сады</div>
+          <div class="spectrum-subtitle">Лето в Москве 2025</div>
+        </div>
+      </div>
+      <div class="spectrum-card">
+        <img src="images/manor_group.jpg" alt="Стилизация эпохи" />
+        <div class="spectrum-card-content">
+          <div class="spectrum-tag">Театральные программы</div>
+          <div class="spectrum-title">Стилизация эпохи</div>
+          <div class="spectrum-subtitle">Усадьбы Москвы 2024</div>
+        </div>
+      </div>
+      <div class="spectrum-card">
+        <img src="images/acap_main.jpg" alt="Уличные концерты" />
+        <div class="spectrum-card-content">
+          <div class="spectrum-tag">Музыкальные события</div>
+          <div class="spectrum-title">Уличные концерты</div>
+          <div class="spectrum-subtitle">Московская Акапелла 2019</div>
+        </div>
+      </div></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-eyebrow">Карьера в цифрах</div>
+    <h2 class="stats-title">Семнадцать лет городских&nbsp;проектов&nbsp;— <em style="color: var(--accent-soft); font-style: italic;">в&nbsp;цифрах.</em></h2>
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-num">50<small>+</small></div><div class="stat-label">Реализованных<br/>проектов</div></div>
+      <div class="stat"><div class="stat-num">100<small>+</small></div><div class="stat-label">Локаций<br/>за карьеру</div></div>
+      <div class="stat"><div class="stat-num">5<small>+</small></div><div class="stat-label">Госзаказчиков<br/>Москвы</div></div>
+      <div class="stat"><div class="stat-num">50<small>+</small></div><div class="stat-label">Человек<br/>в команде</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-eyebrow">О себе</div>
+    <h2 class="section-title">Превращаю Москву<br/>в&nbsp;<em>лучший город на&nbsp;земле.</em></h2>
+    <div class="about-grid">
+      <aside class="about-aside">
+        <div class="principles">
+          <div class="principles-title">Принципы в&nbsp;работе</div>
+          <ul>
+            <li>Принимать самостоятельные решения и&nbsp;нести за&nbsp;них ответственность</li>
+            <li>Настраивать команду на&nbsp;успех</li>
+            <li>Находить нетривиальные решения сложных задач</li>
+            <li>Сохранять позитивное мышление в&nbsp;любой ситуации</li>
+            <li>Видеть ситуацию в&nbsp;целом, уделяя внимание мелочам</li>
+            <li>Творчество и&nbsp;креатив на&nbsp;всех стадиях проекта</li>
+          </ul>
+        </div>
+      </aside>
+      <div class="about-text">
+        <p>Творчество, свобода мыслей и&nbsp;поиск нестандартных решений&nbsp;— на&nbsp;мой взгляд, путь к&nbsp;успеху в&nbsp;любом деле. Как коренная москвичка, большую часть своей трудовой деятельности превращала Москву в&nbsp;лучший город на&nbsp;земле.</p>
+        <p>Закончив <strong>Московский городской университет управления Правительства Москвы</strong>, начала свою деятельность в&nbsp;Комитете рекламы, информации и&nbsp;оформления города Москвы&nbsp;— и&nbsp;сразу научилась мыслить масштабами города. Первым проектом стала концепция установки средств наружной рекламы на&nbsp;территории Москвы, реализованная под&nbsp;непосредственным контролем Мэра.</p>
+        <p>Получила образование в&nbsp;области организации конкурсов и&nbsp;торгов в&nbsp;Тендерном департаменте Москвы, стала ответственным секретарём конкурсной комиссии Комитета рекламы. В&nbsp;дальнейшем перешла в&nbsp;отдел праздничного оформления города.</p>
+        <p>С&nbsp;2009&nbsp;года работаю в&nbsp;коммерческих структурах: <strong>организация и&nbsp;проведение культурно-массовых и&nbsp;частных мероприятий, оформление, декорирование и&nbsp;озеленение городских пространств</strong>&nbsp;— в&nbsp;том числе в&nbsp;рамках государственных контрактов.</p>
+        <p>В&nbsp;сентябре 2025&nbsp;года выступала приглашённым спикером на&nbsp;международной ландшафтной конференции в&nbsp;сессии «Выставочные сады».</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="cases-head">
+      <div>
+        <div class="section-eyebrow">Избранные проекты</div>
+        <h2 class="section-title">Проекты, которыми<br/><em>горжусь.</em></h2>
+      </div>
+      <div class="cases-count">/ 5 КЕЙСОВ</div>
+    </div>
+    
+    <article class="case-hero">
+      <div class="case-hero-image" data-case="summer" data-idx="0">
+        <img src="images/case_summer_04.jpg" alt="«Лето в Москве. Сады и цветы»" />
+        <div class="case-hero-overlay"><span>Открыть галерею</span></div>
+      </div>
+      <div class="case-hero-content">
+        <span class="case-tag">Флагман сезона · 2025</span>
+        <h3 class="case-title">«Лето в Москве. Сады и цветы»</h3>
+        <div class="case-meta">
+          <span>Департамент торговли и услуг города Москвы</span>
+          <span>Руководитель проектов</span>
+        </div>
+        <p class="case-desc">Каждая локация — отдельное приключение. Вертикальное озеленение, парапеты на мостах и набережных, городские склоны, тематические Дни культуры разных стран. Чем сложнее задача, тем больше удовольствия от результата.</p>
+        <div class="case-stats"><div><div class="case-stat-num">67</div><div class="case-stat-label">локаций в ЦАО</div></div><div><div class="case-stat-num">50+</div><div class="case-stat-label">в команде</div></div><div><div class="case-stat-num">10+</div><div class="case-stat-label">Дней культур</div></div></div>
+      </div>
+    </article>
+    <div class="case-gallery">
+        <button class="gal-item" data-case="summer" data-idx="1" aria-label="Цветочные парапеты на Большом Москворецком мосту"><img src="images/case_summer_02.jpg" alt="Цветочные парапеты на Большом Москворецком мосту" loading="lazy" /><span class="gal-caption">Цветочные парапеты на Большом Москворецком мосту</span></button>
+        <button class="gal-item" data-case="summer" data-idx="2" aria-label="Дни культуры Индии — Манежная площадь"><img src="images/summer_india_arch.jpg" alt="Дни культуры Индии — Манежная площадь" loading="lazy" /><span class="gal-caption">Дни культуры Индии — Манежная площадь</span></button>
+        <button class="gal-item" data-case="summer" data-idx="3" aria-label="Дни Вьетнама — «Симфония тропических красок»"><img src="images/summer_vietnam.jpg" alt="Дни Вьетнама — «Симфония тропических красок»" loading="lazy" /><span class="gal-caption">Дни Вьетнама — «Симфония тропических красок»</span></button>
+        <button class="gal-item" data-case="summer" data-idx="4" aria-label="Дни культуры ОАЭ — Манежная площадь"><img src="images/summer_uae_perf.jpg" alt="Дни культуры ОАЭ — Манежная площадь" loading="lazy" /><span class="gal-caption">Дни культуры ОАЭ — Манежная площадь</span></button>
+        <button class="gal-item" data-case="summer" data-idx="5" aria-label="Детская локация — цирковой слон"><img src="images/summer_kids.jpg" alt="Детская локация — цирковой слон" loading="lazy" /><span class="gal-caption">Детская локация — цирковой слон</span></button>
+        <button class="gal-item" data-case="summer" data-idx="6" aria-label="Цветочная стена на Никольской"><img src="images/summer_nikolskaya.jpg" alt="Цветочная стена на Никольской" loading="lazy" /><span class="gal-caption">Цветочная стена на Никольской</span></button>
+        <button class="gal-item" data-case="summer" data-idx="7" aria-label="Зелёный фасад Московского зоопарка"><img src="images/summer_zoo.jpg" alt="Зелёный фасад Московского зоопарка" loading="lazy" /><span class="gal-caption">Зелёный фасад Московского зоопарка</span></button>
+        <button class="gal-item" data-case="summer" data-idx="8" aria-label="Фестиваль Индии в Москве 2025"><img src="images/case_summer_01.jpg" alt="Фестиваль Индии в Москве 2025" loading="lazy" /><span class="gal-caption">Фестиваль Индии в Москве 2025</span></button>
+    </div>
+    
+    <div class="cases-grid">
+    <article class="case-card">
+      <div class="case-card-image" data-case="xmas" data-idx="0">
+        <img src="images/xmas_china.jpg" alt="«Путешествие в Рождество»" loading="lazy" />
+        <div class="case-card-badge">+4 фото</div>
+      </div>
+      <div class="case-card-body">
+        <div class="case-card-year">2024 · 2025 · 2026</div>
+        <h3 class="case-card-title">«Путешествие в Рождество»</h3>
+        <div class="case-card-meta">18 локаций · 3 сезона подряд</div>
+        <p class="case-card-desc">Создание праздника и сказки на центральных улицах Москвы. Включая «Китайский Новый год». Восторженная реакция гостей и публикации в СМИ — лучшая компенсация за короткий световой день и погодные капризы.</p>
+        <div class="case-card-mini-gal"><button class="mini-thumb" data-case="xmas" data-idx="1" aria-label="Световая арка"><img src="images/xmas_arch.jpg" alt="Световая арка" loading="lazy" /></button><button class="mini-thumb" data-case="xmas" data-idx="2" aria-label="Рождественский паровозик"><img src="images/xmas_train.jpg" alt="Рождественский паровозик" loading="lazy" /></button><button class="mini-thumb" data-case="xmas" data-idx="3" aria-label="Китайский Новый год — сцена"><img src="images/xmas_china2.jpg" alt="Китайский Новый год — сцена" loading="lazy" /></button><button class="mini-thumb" data-case="xmas" data-idx="4" aria-label="Праздничные ёлки"><img src="images/xmas_girl.jpg" alt="Праздничные ёлки" loading="lazy" /></button></div>
+      </div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-card-image" data-case="manor" data-idx="0">
+        <img src="images/manor_lady.jpg" alt="«Усадьбы Москвы»" loading="lazy" />
+        <div class="case-card-badge">+4 фото</div>
+      </div>
+      <div class="case-card-body">
+        <div class="case-card-year">2024</div>
+        <h3 class="case-card-title">«Усадьбы Москвы»</h3>
+        <div class="case-card-meta">6 локаций · 3 переезда</div>
+        <p class="case-card-desc">Один из самых красивых, светлых, стилизованных проектов. Три переезда между парками за три месяца. Анимационная программа в стиле конца XIX — начала XX века: мастер-классы, артисты, кинопоказы. Москвичи переезжали вместе с нами.</p>
+        <div class="case-card-mini-gal"><button class="mini-thumb" data-case="manor" data-idx="1" aria-label="Труппа актёров — стилизация эпохи"><img src="images/manor_group.jpg" alt="Труппа актёров — стилизация эпохи" loading="lazy" /></button><button class="mini-thumb" data-case="manor" data-idx="2" aria-label="Уличный спектакль для гостей"><img src="images/manor_theater.jpg" alt="Уличный спектакль для гостей" loading="lazy" /></button><button class="mini-thumb" data-case="manor" data-idx="3" aria-label="Музыкальная программа в Усадьбе"><img src="images/manor_stage.jpg" alt="Музыкальная программа в Усадьбе" loading="lazy" /></button><button class="mini-thumb" data-case="manor" data-idx="4" aria-label="Игра в крокет — Кусково"><img src="images/manor_croquet.jpg" alt="Игра в крокет — Кусково" loading="lazy" /></button></div>
+      </div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-card-image" data-case="seasons" data-idx="0">
+        <img src="images/seasons_wheat1.jpg" alt="«Московские сезоны»" loading="lazy" />
+        <div class="case-card-badge">+8 фото</div>
+      </div>
+      <div class="case-card-body">
+        <div class="case-card-year">2016 — 2019</div>
+        <h3 class="case-card-title">«Московские сезоны»</h3>
+        <div class="case-card-meta">27 локаций ЦАО · 4 фестиваля</div>
+        <p class="case-card-desc">«Московское варенье», «Московская осень», «Пасхальный дар», «Московская весна». Поле пшеницы с маками на площади Революции, гигантские банки варенья по Москве, хоры на уличных сценах. Смелые концепции и освещение во всех ведущих СМИ.</p>
+        <div class="case-card-mini-gal"><button class="mini-thumb" data-case="seasons" data-idx="1" aria-label="Поле пшеницы у Исторического музея"><img src="images/seasons_wheat2.jpg" alt="Поле пшеницы у Исторического музея" loading="lazy" /></button><button class="mini-thumb" data-case="seasons" data-idx="2" aria-label="Гости в пшеничном поле"><img src="images/seasons_wheat_woman.jpg" alt="Гости в пшеничном поле" loading="lazy" /></button><button class="mini-thumb" data-case="seasons" data-idx="3" aria-label="«Московское варенье» — карусель"><img src="images/seasons_jam1.jpg" alt="«Московское варенье» — карусель" loading="lazy" /></button><button class="mini-thumb" data-case="seasons" data-idx="4" aria-label="Пасхальное яйцо на улице"><img src="images/seasons_pasch_egg.jpg" alt="Пасхальное яйцо на улице" loading="lazy" /></button></div>
+      </div>
+    </article>
+    
+    <article class="case-card">
+      <div class="case-card-image" data-case="acap" data-idx="0">
+        <img src="images/acap_main.jpg" alt="«Московская Акапелла»" loading="lazy" />
+        <div class="case-card-badge">+1 фото</div>
+      </div>
+      <div class="case-card-body">
+        <div class="case-card-year">2019</div>
+        <h3 class="case-card-title">«Московская Акапелла»</h3>
+        <div class="case-card-meta">25 локаций ЦАО · 1 месяц фестиваля</div>
+        <p class="case-card-desc">Музыкальные площадки на 25 локациях ЦАО. Целый месяц коллективы боролись за приз зрительских симпатий. Закрытие — под открытым небом в парке «Зарядье», со звёздами эстрады. Громко заявивший о себе песней проект.</p>
+        <div class="case-card-mini-gal"><button class="mini-thumb" data-case="acap" data-idx="1" aria-label="Большой хор у Кремля"><img src="images/acap_choir.jpg" alt="Большой хор у Кремля" loading="lazy" /></button></div>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-eyebrow">Хронология</div>
+    <h2 class="section-title">Опыт <em>работы.</em></h2>
+    <div class="timeline">
+      <div class="tl-item highlight">
+        <div class="tl-period">Апрель 2024 — настоящее время</div>
+        <h3 class="tl-role">Менеджер проектов</h3>
+        <div class="tl-company">Коммерческая компания · Городские культурно-массовые проекты</div>
+        <p class="tl-desc">Организация и&nbsp;руководство городскими культурно-массовыми проектами от&nbsp;концепции до&nbsp;реализации. Координация всех отделов компании на&nbsp;67&nbsp;локациях в&nbsp;ЦАО. Поиск подрядчиков, контроль производства конструктивов и&nbsp;арт-объектов, графики монтажей/демонтажей, отчётность Заказчику. Проекты: «Усадьбы Москвы», «Путешествие в&nbsp;Рождество 2025/2026», «Лето в&nbsp;Москве. Сады и&nbsp;цветы 2025/2026».</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">Ноябрь 2023 — Апрель 2024</div>
+        <h3 class="tl-role">Менеджер проектов</h3>
+        <div class="tl-company">ООО «Главстрой» · Девелопмент элитного жилья</div>
+        <p class="tl-desc">Всестороннее сопровождение маркетинговых проектов: участие в&nbsp;создании концепций, разработка ТЗ, согласование, подготовка презентационных материалов, переговоры с&nbsp;подрядчиками, планирование и&nbsp;контроль реализации.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">Ноябрь 2020 — Ноябрь 2023</div>
+        <h3 class="tl-role">Менеджер по работе с клиентами</h3>
+        <div class="tl-company">ООО «Белёвская пастильная мануфактура» · FMCG</div>
+        <p class="tl-desc">Формирование пакета документов для&nbsp;поставки продукции, переговоры с&nbsp;крупными клиентами, взаимодействие со&nbsp;всеми структурными подразделениями организации, организация участия компании в&nbsp;выставках.</p>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-period">Сентябрь 2017 — Август 2019</div>
+        <h3 class="tl-role">Руководитель проектов · Специалист по тендерам</h3>
+        <div class="tl-company">Группа компаний · Искусство и&nbsp;культура</div>
+        <p class="tl-desc">Стратегия развития комфортной городской среды. Формирование конкурсной документации, технические задания, бюджетная оценка проектов, разработка закупочной документации, формирование НМЦК. Проект «Московская Акапелла» (25&nbsp;локаций), частные ВИП-мероприятия.</p>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-period">Март 2016 — Сентябрь 2017</div>
+        <h3 class="tl-role">Ведущий специалист</h3>
+        <div class="tl-company">ГБУ «Московские ярмарки города Москвы»</div>
+        <p class="tl-desc">Отдел организации культурно-массовых мероприятий. Разработка концепций, формирование конкурсной документации и&nbsp;ТЗ, организация и&nbsp;контроль работы подрядчиков по&nbsp;государственным контрактам.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">Август 2009 — Февраль 2016</div>
+        <h3 class="tl-role">Специалист по&nbsp;организации культурно-массовых мероприятий</h3>
+        <div class="tl-company">ООО «Московский сувенир плюс»</div>
+        <p class="tl-desc">Подготовка конкурсной документации для&nbsp;тендеров. Поиск подрядчиков, контроль выполнения обязательств, отчётность по&nbsp;ярмаркам, фестивалям, концертам, культурным программам для&nbsp;детей и&nbsp;взрослых, в&nbsp;том числе с&nbsp;ограниченными возможностями. В&nbsp;числе реализованных проектов&nbsp;— Первый московский кинофестиваль «Будем&nbsp;жить!» в&nbsp;кинотеатре «Художественный».</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">Апрель 2008 — Апрель 2009</div>
+        <h3 class="tl-role">Рекламный менеджер</h3>
+        <div class="tl-company">ООО «Бонус-Медиа»</div>
+        <p class="tl-desc">Продажа рекламных поверхностей на&nbsp;территории Москвы. Организация работы подрядчиков по&nbsp;печати рекламных баннеров, поиск и&nbsp;развитие новых подрядных отношений.</p>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-period">Апрель 2003 — Апрель 2008</div>
+        <h3 class="tl-role">Главный специалист отдела праздничного оформления</h3>
+        <div class="tl-company">Комитет рекламы и&nbsp;информации города Москвы</div>
+        <p class="tl-desc">Ответственный секретарь конкурсной комиссии Комитета. Формирование конкурсной документации, технические задания по&nbsp;организации праздничного оформления города. Реализация концепции по&nbsp;размещению средств наружной рекламы на&nbsp;территории Москвы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="section-eyebrow">Компетенции</div>
+    <h2 class="section-title">Что <em>умею.</em></h2>
+    <div class="skills-grid">
+      <div class="skills-col">
+        <h3>Профессиональные навыки</h3>
+        <ul class="skill-list">
+          <li>Разработка концепций</li>
+          <li>Конкурсная документация</li>
+          <li>Технические задания (ТЗ)</li>
+          <li>Согласования с&nbsp;органами власти</li>
+          <li>Бюджетирование, НМЦК</li>
+          <li>Управление подрядчиками</li>
+          <li>Планирование монтажей/демонтажей</li>
+          <li>Координация межведомственных комиссий</li>
+          <li>Кризисный менеджмент</li>
+          <li>Деловые переговоры</li>
+          <li>Публичные выступления</li>
+          <li>Подготовка коммерческих предложений</li>
+          <li>Банковская гарантия</li>
+          <li>Отчётность Заказчику</li>
+        </ul>
+      </div>
+      <div class="skills-col">
+        <h3>Инструменты и&nbsp;языки</h3>
+        <div class="tools-list">
+          <div class="tool"><span class="tool-name">MS Excel</span><span class="tool-level">Продвинутый</span></div>
+          <div class="tool"><span class="tool-name">MS Word, PowerPoint</span><span class="tool-level">Продвинутый</span></div>
+          <div class="tool"><span class="tool-name">ЕАИСТ</span><span class="tool-level">Гос-системы торгов</span></div>
+          <div class="tool"><span class="tool-name">Русский язык</span><span class="tool-level">Родной</span></div>
+          <div class="tool"><span class="tool-name">Английский язык</span><span class="tool-level">B2</span></div>
+        </div>
+        <h3 style="margin-top:48px">Образование</h3>
+        <div class="tools-list">
+          <div class="tool" style="flex-direction:column; align-items:flex-start; gap:6px; padding-bottom:18px"><span class="tool-name">Московский городской университет управления Правительства Москвы</span><span class="tool-level">Государственное и&nbsp;муниципальное управление, Менеджмент · 2004</span></div>
+          <div class="tool" style="flex-direction:column; align-items:flex-start; gap:6px"><span class="tool-name">Тендерный департамент города Москвы</span><span class="tool-level">Сертификат · Организация конкурсов и&nbsp;торгов</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="container">
+    <div class="section-eyebrow">С кем работала</div>
+    <h2 class="section-title" style="margin-bottom:0">Государственные <em>заказчики.</em></h2>
+    <div class="clients-grid">
+      <div class="client"><span class="client-num">01</span>Департамент торговли и&nbsp;услуг города Москвы</div>
+      <div class="client"><span class="client-num">02</span>Департамент туризма города Москвы</div>
+      <div class="client"><span class="client-num">03</span>Департамент социальной защиты города Москвы</div>
+      <div class="client"><span class="client-num">04</span>Департамент молодёжной политики города Москвы</div>
+      <div class="client"><span class="client-num">05</span>Комитет рекламы и&nbsp;информации города Москвы</div>
+      <div class="client"><span class="client-num">06</span>ГБУ «Московские ярмарки города Москвы»</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-eyebrow">Контакты</div>
+      <h1 class="contact-title">Готова обсудить <em>ваш&nbsp;проект.</em></h1>
+      <p class="contact-text">Открыта к&nbsp;интересным предложениям в&nbsp;сферах event и&nbsp;фестивалей, городских и&nbsp;урбанистических проектов, культурных институций, туризма и&nbsp;государственных структур.</p>
+      <div class="contact-list">
+        <div class="contact-item"><span class="contact-item-label">E-mail</span><a href="mailto:linkanastar@yandex.ru">linkanastar@yandex.ru</a></div>
+        <div class="contact-item"><span class="contact-item-label">Телефон</span><a href="tel:+79165860597">+7 916 586 05 97</a></div>
+        <div class="contact-item"><span class="contact-item-label">Telegram</span><a href="https://t.me/NatashaFaychuk" target="_blank" rel="noopener">@NatashaFaychuk</a></div>
+        <div class="contact-item"><span class="contact-item-label">Локация</span><span class="val">Москва</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© 2026 Наталья Александровна Файчук. Все права защищены.</div>
+    <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;">PORTFOLIO · v2.0</div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Галерея">
+  <button class="lb-close" id="lbClose" aria-label="Закрыть">×</button>
+  <div class="lb-counter" id="lbCounter">1 / 1</div>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Предыдущее">‹</button>
+  <div class="lb-img-wrap">
+    <img class="lb-img" id="lbImg" src="" alt="" />
+    <div class="lb-caption" id="lbCaption"></div>
+  </div>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Следующее">›</button>
+</div>
+
+<script>
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
+const LB_DATA = {"summer": [{"src": "images/case_summer_04.jpg", "caption": "«Лето в Москве. Сады и цветы»"}, {"src": "images/case_summer_02.jpg", "caption": "Цветочные парапеты на Большом Москворецком мосту"}, {"src": "images/summer_india_arch.jpg", "caption": "Дни культуры Индии — Манежная площадь"}, {"src": "images/summer_vietnam.jpg", "caption": "Дни Вьетнама — «Симфония тропических красок»"}, {"src": "images/summer_uae_perf.jpg", "caption": "Дни культуры ОАЭ — Манежная площадь"}, {"src": "images/summer_kids.jpg", "caption": "Детская локация — цирковой слон"}, {"src": "images/summer_nikolskaya.jpg", "caption": "Цветочная стена на Никольской"}, {"src": "images/summer_zoo.jpg", "caption": "Зелёный фасад Московского зоопарка"}, {"src": "images/case_summer_01.jpg", "caption": "Фестиваль Индии в Москве 2025"}], "xmas": [{"src": "images/xmas_china.jpg", "caption": "«Путешествие в Рождество»"}, {"src": "images/xmas_arch.jpg", "caption": "Световая арка"}, {"src": "images/xmas_train.jpg", "caption": "Рождественский паровозик"}, {"src": "images/xmas_china2.jpg", "caption": "Китайский Новый год — сцена"}, {"src": "images/xmas_girl.jpg", "caption": "Праздничные ёлки"}], "manor": [{"src": "images/manor_lady.jpg", "caption": "«Усадьбы Москвы»"}, {"src": "images/manor_group.jpg", "caption": "Труппа актёров — стилизация эпохи"}, {"src": "images/manor_theater.jpg", "caption": "Уличный спектакль для гостей"}, {"src": "images/manor_stage.jpg", "caption": "Музыкальная программа в Усадьбе"}, {"src": "images/manor_croquet.jpg", "caption": "Игра в крокет — Кусково"}], "seasons": [{"src": "images/seasons_wheat1.jpg", "caption": "«Московские сезоны»"}, {"src": "images/seasons_wheat2.jpg", "caption": "Поле пшеницы у Исторического музея"}, {"src": "images/seasons_wheat_woman.jpg", "caption": "Гости в пшеничном поле"}, {"src": "images/seasons_jam1.jpg", "caption": "«Московское варенье» — карусель"}, {"src": "images/seasons_pasch_egg.jpg", "caption": "Пасхальное яйцо на улице"}, {"src": "images/seasons_pasch_dance.jpg", "caption": "Пасхальный дар — детский ансамбль"}, {"src": "images/seasons_pasch_lamps.jpg", "caption": "Цветные светильники над улицей"}, {"src": "images/seasons_spring.jpg", "caption": "Московская весна — хор"}, {"src": "images/seasons_blue_man.jpg", "caption": "Уличная музыкальная сцена"}], "acap": [{"src": "images/acap_main.jpg", "caption": "«Московская Акапелла»"}, {"src": "images/acap_choir.jpg", "caption": "Большой хор у Кремля"}]};
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCaption = document.getElementById('lbCaption');
+const lbCounter = document.getElementById('lbCounter');
+let lbCurrent = { caseId: null, idx: 0 };
+
+function openLightbox(caseId, idx) {
+  const items = LB_DATA[caseId];
+  if (!items) return;
+  lbCurrent = { caseId, idx };
+  showLbItem();
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function showLbItem() {
+  const items = LB_DATA[lbCurrent.caseId];
+  const item = items[lbCurrent.idx];
+  lbImg.src = item.src;
+  lbCaption.textContent = item.caption;
+  lbCounter.textContent = (lbCurrent.idx + 1) + ' / ' + items.length;
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function nextLb() {
+  const items = LB_DATA[lbCurrent.caseId];
+  lbCurrent.idx = (lbCurrent.idx + 1) % items.length;
+  showLbItem();
+}
+function prevLb() {
+  const items = LB_DATA[lbCurrent.caseId];
+  lbCurrent.idx = (lbCurrent.idx - 1 + items.length) % items.length;
+  showLbItem();
+}
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbNext').addEventListener('click', nextLb);
+document.getElementById('lbPrev').addEventListener('click', prevLb);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', e => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') nextLb();
+  if (e.key === 'ArrowLeft') prevLb();
+});
+
+document.querySelectorAll('[data-case]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    const caseId = el.dataset.case;
+    const idx = parseInt(el.dataset.idx || '0', 10);
+    openLightbox(caseId, idx);
+  });
+});
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('reveal');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.stat, .case-card, .case-hero, .tl-item, .skills-col, .client, .spectrum-card').forEach(el => {
+  el.style.opacity = '0';
+  io.observe(el);
+});
+const styleEl = document.createElement('style');
+styleEl.textContent = '.stat.reveal, .case-card.reveal, .case-hero.reveal, .tl-item.reveal, .skills-col.reveal, .client.reveal, .spectrum-card.reveal { animation: fadeUp .8s ease both; opacity: 1 !important; }';
+document.head.appendChild(styleEl);
+</script>
+
+</body>
+</html>

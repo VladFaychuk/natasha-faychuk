@@ -276,6 +276,90 @@ button { font: inherit; }
   .stat { border-left: none !important; padding-left: 0 !important; padding-right: 0; }
 }
 
+/* ========== ПЕЧАТЬ / PDF ========== */
+@media print {
+  @page { size: A4; margin: 12mm 14mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  html, body { background: white !important; }
+  body { color: #1A2238 !important; font-size: 10.5pt; line-height: 1.45; }
+  body::before { display: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
+  a { text-decoration: none !important; color: inherit !important; }
+  .header, .burger, .hero-cta, .lightbox, .footer { display: none !important; }
+  .spectrum, .case-gallery, .case-card-mini-gal, .case-card-badge, .case-hero-overlay { display: none !important; }
+  .hero-portrait-no, .hero-portrait-mark { display: none !important; }
+  .container { max-width: 100% !important; padding: 0 !important; }
+  .stats, .contact { background: white !important; color: #1A2238 !important; }
+  .stats::before, .contact::before { display: none !important; }
+  .stat { border-left-color: #ddd !important; padding: 8pt 12pt !important; }
+  .stat:first-child { padding-left: 0 !important; }
+  .stat-num { color: #1A2238 !important; font-size: 28pt !important; margin-bottom: 4pt !important; }
+  .stat-num small { color: #B43F2E !important; font-size: 12pt !important; }
+  .stat-label { color: #6E6760 !important; font-size: 9pt !important; }
+  .stats-title, .stats-eyebrow { color: #1A2238 !important; }
+  .stats-title { font-size: 18pt !important; margin-bottom: 14pt !important; }
+  .contact-title { color: #1A2238 !important; font-size: 22pt !important; margin-bottom: 12pt !important; }
+  .contact-text { color: #2D3656 !important; font-size: 11pt !important; margin-bottom: 16pt !important; }
+  .contact-item-label { color: #6E6760 !important; }
+  .contact-item a, .contact-item span.val { color: #1A2238 !important; font-size: 13pt !important; }
+  .contact .section-eyebrow { color: #B43F2E !important; }
+  .hero { padding: 0 0 8pt 0 !important; }
+  .stats { padding: 12pt 0 !important; }
+  .about, .cases, .experience, .skills, .clients, .contact { padding: 14pt 0 !important; }
+  .section-title { margin-bottom: 12pt !important; font-size: 22pt !important; line-height: 1.1 !important; }
+  .hero-grid { grid-template-columns: 1fr 130pt !important; gap: 16pt !important; align-items: start !important; }
+  .hero-title { font-size: 32pt !important; margin-bottom: 8pt !important; line-height: 1 !important; }
+  .hero-tagline { font-size: 13pt !important; margin-bottom: 10pt !important; max-width: 100% !important; }
+  .hero-eyebrow { margin-bottom: 10pt !important; }
+  .hero-meta { margin-bottom: 0 !important; font-size: 9.5pt !important; gap: 6pt 16pt !important; }
+  .hero-portrait { max-width: 130pt !important; }
+  .hero-portrait-frame { aspect-ratio: 1 !important; }
+  .principles { padding: 12pt !important; }
+  .principles-title { font-size: 13pt !important; margin-bottom: 8pt !important; }
+  .principles li { font-size: 10pt !important; padding-left: 14pt !important; }
+  .about-grid { grid-template-columns: 200pt 1fr !important; gap: 16pt !important; }
+  .about-text p { font-size: 10.5pt !important; line-height: 1.55 !important; margin-bottom: 8pt !important; }
+  .case-hero { grid-template-columns: 200pt 1fr !important; margin-bottom: 12pt !important; background: #FBFAF7 !important; }
+  .case-hero-image { min-height: 0 !important; height: 200pt !important; }
+  .case-hero-image img { height: 100% !important; object-fit: cover !important; }
+  .case-hero-content { padding: 12pt 16pt !important; }
+  .case-title { font-size: 16pt !important; margin-bottom: 6pt !important; }
+  .case-tag { font-size: 8pt !important; padding: 3pt 6pt !important; margin-bottom: 8pt !important; }
+  .case-meta { font-size: 9.5pt !important; margin-bottom: 8pt !important; gap: 6pt !important; }
+  .case-desc { font-size: 10pt !important; line-height: 1.5 !important; margin-bottom: 10pt !important; }
+  .case-stats { gap: 10pt !important; padding-top: 8pt !important; }
+  .case-stat-num { font-size: 20pt !important; }
+  .case-stat-label { font-size: 9pt !important; }
+  .cases-grid { grid-template-columns: 1fr !important; gap: 10pt !important; }
+  .case-card { display: grid !important; grid-template-columns: 130pt 1fr !important; background: #FBFAF7 !important; page-break-inside: avoid !important; }
+  .case-card-image { aspect-ratio: auto !important; height: 100% !important; min-height: 130pt !important; }
+  .case-card-body { padding: 10pt 14pt !important; }
+  .case-card-title { font-size: 14pt !important; margin-bottom: 4pt !important; }
+  .case-card-year { font-size: 9pt !important; margin-bottom: 4pt !important; }
+  .case-card-meta { font-size: 9.5pt !important; margin-bottom: 6pt !important; }
+  .case-card-desc { font-size: 9.5pt !important; line-height: 1.5 !important; margin-bottom: 0 !important; }
+  .timeline { padding-left: 16pt !important; }
+  .tl-item { padding-bottom: 14pt !important; page-break-inside: avoid !important; }
+  .tl-item::before { left: -22pt !important; }
+  .tl-period { font-size: 9pt !important; margin-bottom: 4pt !important; }
+  .tl-role { font-size: 13pt !important; margin-bottom: 2pt !important; }
+  .tl-company { font-size: 10pt !important; margin-bottom: 6pt !important; }
+  .tl-desc { font-size: 10pt !important; line-height: 1.55 !important; }
+  .skills-grid { gap: 24pt !important; }
+  .skills-col h3 { font-size: 13pt !important; margin-bottom: 10pt !important; padding-bottom: 6pt !important; }
+  .skill-list { gap: 5pt !important; }
+  .skill-list li { padding: 4pt 8pt !important; font-size: 9pt !important; background: #F5F0E8 !important; }
+  .tool { padding: 6pt 0 !important; font-size: 10pt !important; }
+  .tool-level { font-size: 9pt !important; }
+  .clients-grid { gap: 8pt 24pt !important; margin-top: 12pt !important; }
+  .client { padding: 8pt 0 !important; font-size: 11pt !important; }
+  .contact-list { gap: 16pt !important; }
+  .about, .cases, .experience, .skills, .contact { page-break-before: always; }
+  .case-hero, .case-card, .tl-item, .skills-col, .principles { page-break-inside: avoid !important; }
+  h2, h3 { page-break-after: avoid !important; }
+}
+/* ========== /ПЕЧАТЬ ========== */
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }

@@ -64,6 +64,9 @@ button { font: inherit; }
 .nav-links a::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 1px; background: var(--accent); transition: width .3s ease; }
 .nav-links a:hover { color: var(--accent); }
 .nav-links a:hover::after { width: 100%; }
+.pdf-btn { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; background: transparent; color: var(--accent); border: 1px solid var(--accent); font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all .25s ease; white-space: nowrap; }
+.pdf-btn:hover { background: var(--accent); color: var(--bg); transform: translateY(-1px); }
+.pdf-btn svg { flex-shrink: 0; }
 .burger { display: none; background: none; border: none; cursor: pointer; width: 36px; height: 36px; padding: 8px; }
 .burger span { display: block; width: 100%; height: 1.5px; background: var(--ink); margin: 5px 0; transition: transform .3s, opacity .3s; }
 .burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
@@ -290,6 +293,7 @@ button { font: inherit; }
   .hero-portrait-no, .hero-portrait-mark { display: none !important; }
   .container { max-width: 100% !important; padding: 0 !important; }
   .stats, .contact { background: white !important; color: #1A2238 !important; }
+  .cases, .skills { background: white !important; }
   .stats::before, .contact::before { display: none !important; }
   .stat { border-left-color: #ddd !important; padding: 8pt 12pt !important; }
   .stat:first-child { padding-left: 0 !important; }
@@ -304,23 +308,25 @@ button { font: inherit; }
   .contact-item a, .contact-item span.val { color: #1A2238 !important; font-size: 13pt !important; }
   .contact .section-eyebrow { color: #B43F2E !important; }
   .hero { padding: 0 0 8pt 0 !important; }
-  .stats { padding: 12pt 0 !important; }
-  .about, .cases, .experience, .skills, .clients, .contact { padding: 14pt 0 !important; }
-  .section-title { margin-bottom: 12pt !important; font-size: 22pt !important; line-height: 1.1 !important; }
-  .hero-grid { grid-template-columns: 1fr 130pt !important; gap: 16pt !important; align-items: start !important; }
+  .stats { padding: 10pt 0 !important; }
+  .about, .cases, .experience, .skills, .clients, .contact { padding: 10pt 0 !important; }
+  .section-title { margin-bottom: 10pt !important; font-size: 20pt !important; line-height: 1.1 !important; }
+  .hero-grid { grid-template-columns: 1fr !important; gap: 12pt !important; align-items: center !important; text-align: center !important; justify-items: center !important; }
+  .hero-content { text-align: center !important; display: flex !important; flex-direction: column !important; align-items: center !important; }
   .hero-title { font-size: 32pt !important; margin-bottom: 8pt !important; line-height: 1 !important; }
-  .hero-tagline { font-size: 13pt !important; margin-bottom: 10pt !important; max-width: 100% !important; }
-  .hero-eyebrow { margin-bottom: 10pt !important; }
-  .hero-meta { margin-bottom: 0 !important; font-size: 9.5pt !important; gap: 6pt 16pt !important; }
-  .hero-portrait { max-width: 130pt !important; }
+  .hero-title br { display: none !important; }
+  .hero-tagline { font-size: 14pt !important; margin: 0 auto 12pt !important; max-width: 380pt !important; }
+  .hero-eyebrow { margin-bottom: 10pt !important; justify-content: center !important; }
+  .hero-meta { margin-bottom: 0 !important; font-size: 9.5pt !important; gap: 6pt 16pt !important; justify-content: center !important; }
+  .hero-portrait { order: -1 !important; max-width: 220pt !important; width: 220pt !important; margin: 0 auto !important; }
   .hero-portrait-frame { aspect-ratio: 1 !important; }
   .principles { padding: 12pt !important; }
   .principles-title { font-size: 13pt !important; margin-bottom: 8pt !important; }
   .principles li { font-size: 10pt !important; padding-left: 14pt !important; }
   .about-grid { grid-template-columns: 200pt 1fr !important; gap: 16pt !important; }
   .about-text p { font-size: 10.5pt !important; line-height: 1.55 !important; margin-bottom: 8pt !important; }
-  .case-hero { grid-template-columns: 200pt 1fr !important; margin-bottom: 12pt !important; background: #FBFAF7 !important; }
-  .case-hero-image { min-height: 0 !important; height: 200pt !important; }
+  .case-hero { grid-template-columns: 160pt 1fr !important; margin-bottom: 8pt !important; background: #FBFAF7 !important; page-break-inside: avoid !important; }
+  .case-hero-image { min-height: 0 !important; height: 140pt !important; }
   .case-hero-image img { height: 100% !important; object-fit: cover !important; }
   .case-hero-content { padding: 12pt 16pt !important; }
   .case-title { font-size: 16pt !important; margin-bottom: 6pt !important; }
@@ -330,21 +336,21 @@ button { font: inherit; }
   .case-stats { gap: 10pt !important; padding-top: 8pt !important; }
   .case-stat-num { font-size: 20pt !important; }
   .case-stat-label { font-size: 9pt !important; }
-  .cases-grid { grid-template-columns: 1fr !important; gap: 10pt !important; }
-  .case-card { display: grid !important; grid-template-columns: 130pt 1fr !important; background: #FBFAF7 !important; page-break-inside: avoid !important; }
-  .case-card-image { aspect-ratio: auto !important; height: 100% !important; min-height: 130pt !important; }
-  .case-card-body { padding: 10pt 14pt !important; }
-  .case-card-title { font-size: 14pt !important; margin-bottom: 4pt !important; }
-  .case-card-year { font-size: 9pt !important; margin-bottom: 4pt !important; }
-  .case-card-meta { font-size: 9.5pt !important; margin-bottom: 6pt !important; }
-  .case-card-desc { font-size: 9.5pt !important; line-height: 1.5 !important; margin-bottom: 0 !important; }
-  .timeline { padding-left: 16pt !important; }
-  .tl-item { padding-bottom: 14pt !important; page-break-inside: avoid !important; }
-  .tl-item::before { left: -22pt !important; }
-  .tl-period { font-size: 9pt !important; margin-bottom: 4pt !important; }
-  .tl-role { font-size: 13pt !important; margin-bottom: 2pt !important; }
-  .tl-company { font-size: 10pt !important; margin-bottom: 6pt !important; }
-  .tl-desc { font-size: 10pt !important; line-height: 1.55 !important; }
+  .cases-grid { grid-template-columns: 1fr !important; gap: 8pt !important; }
+  .case-card { display: grid !important; grid-template-columns: 110pt 1fr !important; background: #FBFAF7 !important; page-break-inside: avoid !important; }
+  .case-card-image { aspect-ratio: auto !important; height: 100% !important; min-height: 95pt !important; }
+  .case-card-body { padding: 8pt 12pt !important; }
+  .case-card-title { font-size: 13pt !important; margin-bottom: 3pt !important; }
+  .case-card-year { font-size: 8.5pt !important; margin-bottom: 3pt !important; }
+  .case-card-meta { font-size: 9pt !important; margin-bottom: 4pt !important; }
+  .case-card-desc { font-size: 9pt !important; line-height: 1.45 !important; margin-bottom: 0 !important; }
+  .timeline { padding-left: 14pt !important; }
+  .tl-item { padding-bottom: 10pt !important; page-break-inside: avoid !important; }
+  .tl-item::before { left: -20pt !important; width: 7pt !important; height: 7pt !important; }
+  .tl-period { font-size: 8.5pt !important; margin-bottom: 2pt !important; }
+  .tl-role { font-size: 12pt !important; margin-bottom: 1pt !important; }
+  .tl-company { font-size: 9.5pt !important; margin-bottom: 4pt !important; }
+  .tl-desc { font-size: 9.5pt !important; line-height: 1.5 !important; }
   .skills-grid { gap: 24pt !important; }
   .skills-col h3 { font-size: 13pt !important; margin-bottom: 10pt !important; padding-bottom: 6pt !important; }
   .skill-list { gap: 5pt !important; }
@@ -354,8 +360,8 @@ button { font: inherit; }
   .clients-grid { gap: 8pt 24pt !important; margin-top: 12pt !important; }
   .client { padding: 8pt 0 !important; font-size: 11pt !important; }
   .contact-list { gap: 16pt !important; }
-  .about, .cases, .experience, .skills, .contact { page-break-before: always; }
-  .case-hero, .case-card, .tl-item, .skills-col, .principles { page-break-inside: avoid !important; }
+  .cases, .contact { page-break-before: always; }
+  .case-hero, .case-card, .tl-item, .skills-col, .principles, .clients, .skills, .about { page-break-inside: avoid !important; }
   h2, h3 { page-break-after: avoid !important; }
 }
 /* ========== /ПЕЧАТЬ ========== */
@@ -379,6 +385,7 @@ button { font: inherit; }
       <li><a href="#experience">Опыт</a></li>
       <li><a href="#skills">Навыки</a></li>
       <li><a href="#contact">Контакты</a></li>
+      <li><button class="pdf-btn" onclick="window.print()" title="Сохранить страницу как PDF" aria-label="Сохранить как PDF"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Сохранить PDF</button></li>
     </ul>
   </div>
 </header>
@@ -390,7 +397,7 @@ button { font: inherit; }
     <div class="hero-grid">
       <div class="hero-content reveal">
         <div class="hero-eyebrow">Руководитель проектов · Москва</div>
-        <h1 class="hero-title">Наташа<br/>Файчук<em>.</em></h1>
+        <h1 class="hero-title">Наташа <br/>Файчук<em>.</em></h1>
         <p class="hero-tagline">Превращаю Москву в&nbsp;лучший город на&nbsp;земле.</p>
         <div class="hero-meta">
           <span><span class="dot"></span>17+ лет в профессии</span>
